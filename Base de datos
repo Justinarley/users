@@ -1,0 +1,33 @@
+create table pacientes(
+    id SERIAL PRIMARY KEY,
+    cedula integer,
+    nombres varchar(255),
+    telefono integer,
+    correo varchar (255),
+    direccion varchar(255),
+    alergia varchar (255) 
+)
+
+create table doctores(
+    id SERIAL PRIMARY KEY,
+    cedula integer,
+    nombre varchar(255),
+    telefono integer,
+    correo varchar (255),
+    direccion varchar(255),
+    especialidad varchar (255) 
+)
+
+create table citas(
+    id SERIAL PRIMARY KEY,
+    cedula integer,
+    nombre varchar(255),
+    telefono integer,
+    dia varchar (255),
+    hora varchar (255),
+    servicio varchar (255),
+    receta varchar (255)
+)
+
+
+)
