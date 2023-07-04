@@ -1,0 +1,39 @@
+{% extends 'mastercita.html' %}
+{% include 'headercita.html' %}
+
+{% block title %} Delete {% endblock %}
+
+{% block body %}
+<center><h1>Eliminar Cita</h1></center>
+<div class="container">
+    <table class="table">
+        <thead style="background-color: brown;color: aliceblue;">
+           <th>ID</th>
+           <th>Cedula</th>
+           <th>Nombres</th>
+           <th>Telefono</th>
+           <th>Dia</th>
+           <th>Hora</th>
+           <th>Servicio</th>
+           <th>Receta</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{user.id}}</td>
+                <td>{{user.cedula}}</td>
+                <td>{{user.nombre}}</td>
+                <td>{{user.telefono}}</td>
+                <td>{{user.dia}}</td>
+                <td>{{user.hora}}</td>
+                <td>{{user.servicio}}</td>
+                <td>{{user.receta}}</td>
+        </tbody>
+    </table>
+
+    <form action='' method="post">
+        Confirmar si desea eliminar el dato
+        <input type="submit" value="Si" class="btn btn-danger">
+        <a href='/api/citas' class="btn btn-dark">No</a>
+    </form>
+</div>
+{% endblock %}

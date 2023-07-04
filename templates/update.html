@@ -1,0 +1,51 @@
+{% extends 'master.html' %}
+{% include 'header.html' %}
+
+{% block title %} Update {% endblock %}
+
+{% block body %}
+<center><h1>Actualizar Datos del Paciente</h1></center>
+<div class="container">
+    <form action='' method = "POST">
+    <table class="table">
+        <tr>
+            <td>Cedula:</td>
+            <td><input type = "text" name = "ci" value="{{user.cedula}}" class="form-control" /></td>
+        </tr>
+        <tr>
+            <td>Nombres:</td>
+            <td><input type = "text" name = "name" class="form-control" value="{{user.nombres}}" /></td>
+        </tr>
+    
+        <tr>
+            <td>Telefono:</td>
+            <td><input type = "text" name = "cell" class="form-control" value="{{user.telefono}}" /></td>
+        </tr> 
+
+        <tr>
+            <td>Correo:</td>
+            <td><input type = "text" name = "correo" class="form-control" value="{{user.correo}}" /></td>
+        </tr> 
+
+        <tr>
+            <td>Direccion:</td>
+            <td><input type = "text" name = "direc" class="form-control" value="{{user.direccion}}" /></td>
+        </tr> 
+
+        <tr>
+            <td>Alergia a medicamento:</td>
+            <td><input type = "text" name = "alergia" class="form-control" value="{{user.alergia}}" /></td>
+        </tr> 
+    
+        <tr>
+            <td colspan="2">
+                <input type="submit" name="submit" value="Actualizar" class="btn btn-success">
+                <a href='/api/users' class="btn btn-dark">Cancelar</a>
+            </td>           
+        </tr>
+    </table>      
+      </form>
+    
+    </div>
+
+{% endblock %}

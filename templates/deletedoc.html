@@ -1,0 +1,37 @@
+{% extends 'masterdoc.html' %}
+{% include 'headerdoc.html' %}
+
+{% block title %} Delete {% endblock %}
+
+{% block body %}
+<center><h1>Eliminar Datos del Doctor</h1></center>
+<div class="container">
+    <table class="table">
+        <thead style="background-color: brown;color: aliceblue;">
+           <th>ID</th>
+           <th>Cedula</th>
+           <th>Nombres</th>
+           <th>Telefono</th>
+           <th>Correo</th>
+           <th>Direccion</th>
+           <th>Especialidad</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{user.id}}</td>
+                <td>{{user.cedula}}</td>
+                <td>{{user.nombre}}</td>
+                <td>{{user.telefono}}</td>
+                <td>{{user.correo}}</td>
+                <td>{{user.direccion}}</td>
+                <td>{{user.especialidad}}</td>
+        </tbody>
+    </table>
+
+    <form action='' method="post">
+        Confirmar si desea eliminar el dato
+        <input type="submit" value="Si" class="btn btn-danger">
+        <a href='/api/docs' class="btn btn-dark">No</a>
+    </form>
+</div>
+{% endblock %}

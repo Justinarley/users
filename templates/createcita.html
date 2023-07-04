@@ -1,0 +1,57 @@
+{% extends 'mastercita.html' %}
+{% include 'headercita.html' %}
+
+{% block title %} Create {% endblock %}
+
+{% block body %}
+<div class="container">
+    <center><h1>Registro de Citas</h1></center>
+    <form action='' method = "POST">
+    <table class="table">
+        <tr>
+            <td>Cedula:</td>
+            <td><input type = "text" name = "cedula" value="" class="form-control" /></td>
+        </tr>
+        <tr>
+            <td>Nombres:</td>
+            <td><input type = "text" name = "nombre" class="form-control" value="" /></td>
+        </tr>
+    
+        <tr>
+            <td>Telefono:</td>
+            <td><input type = "text" name = "telefono" class="form-control" value="" /></td>
+        </tr> 
+
+        <tr>
+            <td>Dia:</td>
+            <td><input type = "text" name = "dia" class="form-control" value="" /></td>
+        </tr> 
+
+        <tr>
+            <td>Hora:</td>
+            <td><input type = "text" name = "hora" class="form-control" value="" /></td>
+        </tr> 
+
+        <tr>
+            <td>Servicio:</td>
+            <td><input type = "text" name = "servicio" class="form-control" value="" /></td>
+        </tr> 
+        <tr>
+            <td>Receta:</td>
+            <td><input type = "text" name = "receta" class="form-control" value="" /></td>
+        </tr> 
+    
+    
+        <tr>
+            <td colspan="2">
+                <!-- <input type="submit" name="submit" value="Crear" class="btn btn-success"> -->
+                <input type="submit" name="submit" value="Crear" class="btn btn-success">
+                <!-- <a href='/api/citas' class="btn btn-dark">Crear</a> -->
+                <a href='/citas' class="btn btn-dark">Cancelar</a>
+            </td>           
+        </tr>
+    </table>      
+      </form>
+    
+
+{% endblock %}

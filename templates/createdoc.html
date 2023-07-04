@@ -1,0 +1,54 @@
+{% extends 'masterdoc.html' %}
+{% include 'headerdoc.html' %}
+
+{% block title %} Create {% endblock %}
+
+{% block body %}
+
+<div class="container">
+    <center><h1>Registro Doctores</h1></center>
+    <form action='' method = "POST">
+    <table class="table">
+        <tr>
+            <td>Cedula:</td>
+            <td><input type = "text" name = "cidocs" value="" class="form-control" /></td>
+        </tr>
+        <tr>
+            <td>Nombres:</td>
+            <td><input type = "text" name = "namedocs" class="form-control" value="" /></td>
+        </tr>
+    
+        <tr>
+            <td>Telefono:</td>
+            <td><input type = "text" name = "celldocs" class="form-control" value="" /></td>
+        </tr> 
+
+        <tr>
+            <td>Correo:</td>
+            <td><input type = "text" name = "correodocs" class="form-control" value="" /></td>
+        </tr> 
+
+        <tr>
+            <td>Direccion:</td>
+            <td><input type = "text" name = "direcdocs" class="form-control" value="" /></td>
+        </tr> 
+
+        <tr>
+            <td>Especialidad:</td>
+            <td><input type = "text" name = "especialidad" class="form-control" value="" /></td>
+        </tr> 
+    
+        <tr>
+            <td colspan="2">
+                <!-- <input type="submit" name="submit" value="Crear" class="btn btn-success"> -->
+                <input type="submit" name="submit" value="Crear" class="btn btn-success">
+                <!-- <a href='/api/docs' class="btn btn-dark">Crear</a> -->
+                <a href='/docs' class="btn btn-dark">Cancelar</a>
+            </td>           
+        </tr>
+    </table>      
+      </form>
+    
+    </div>
+
+{% endblock %}
